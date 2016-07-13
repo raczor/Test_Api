@@ -37,4 +37,10 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
+
+    @RequestMapping(value = "/greeting-put", method = RequestMethod.DELETE)
+    public Greeting greetingDelete(@RequestParam(value = "name", defaultValue = "Name") String name) {
+        return new Greeting(counter.incrementAndGet(),
+                String.format(template, name));
+    }
 }
